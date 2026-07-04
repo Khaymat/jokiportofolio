@@ -8,9 +8,9 @@ export const siteConfig: SiteConfig = {
   whatsappLink: "http://wa.link/fbeqby",
   whatsappNumber: "6281234567890",
   socialMedia: {
-    instagram: "#",
-    linkedin: "#",
-    tiktok: "#",
+    instagram: "https://instagram.com/jokiportofolio",
+    linkedin: "https://linkedin.com/company/jokiportofolio",
+    tiktok: "https://tiktok.com/@jokiportofolio",
   },
   metadata: {
     title: "jokiportofolio - Jasa Buat CV ATS, Portofolio Kerja & Optimasi Linkedin",
@@ -29,8 +29,8 @@ export const siteConfig: SiteConfig = {
 };
 
 export const COLORS = {
-  primary: "#185fb1",
-  primaryLight: "#4d71e0",
+  primary: "#4d71e0",
+  primaryLight: "#6b8af0",
   primaryDark: "#3455bb",
   accent: "#fbca41",
   dark: "#191919",

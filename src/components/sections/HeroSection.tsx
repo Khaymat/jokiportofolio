@@ -71,7 +71,7 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-4 md:gap-6">
               {stats.map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-base md:text-lg font-extrabold font-heading text-dark">
@@ -90,15 +90,15 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden lg:flex items-center justify-center"
+            className="flex items-center justify-center"
           >
             <div className="relative w-full max-w-md aspect-[4/3]">
               <Image
-                src="/assets/media/ff80108748a757ece737e8a30a8bd000.png"
+                src="/assets/media/hero_image.png"
                 alt="CV Portfolio Preview"
                 fill
                 className="object-contain"
-                sizes="(max-width: 1024px) 0px, 400px"
+                sizes="(max-width: 768px) 100vw, 400px"
                 priority
               />
             </div>

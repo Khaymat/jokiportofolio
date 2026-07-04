@@ -3,6 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const logos = Array.from({ length: 30 }, (_, i) => ({
+  src: `/assets/media/univ_logo_${i + 1}.png`,
+  alt: `Universitas ${i + 1}`,
+}));
+
 export default function MarqueeLogos() {
   return (
     <motion.section
@@ -10,7 +15,7 @@ export default function MarqueeLogos() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="bg-white py-10 overflow-hidden"
+      className="bg-[#f1f1f1] py-10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h3
@@ -18,40 +23,29 @@ export default function MarqueeLogos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center text-dark text-xl md:text-2xl font-bold font-heading mb-8"
+          className="text-center text-dark text-xl md:text-2xl font-bold mb-8"
         >
           <span className="text-primary">100+</span> Universitas Sudah Join, Kamu Kapan?
         </motion.h3>
 
-        {/* Static logo grid - 3x repeat like Canva */}
-        <div className="flex justify-center items-center gap-8">
-          <div className="w-[220px] h-[220px] relative">
-            <Image
-              src="/assets/media/0e5a349d6e1e74b1c26a0f0e7be5ec6a.png"
-              alt="Universitas logos"
-              fill
-              className="object-contain"
-              sizes="220px"
-            />
-          </div>
-          <div className="w-[220px] h-[220px] relative">
-            <Image
-              src="/assets/media/0e5a349d6e1e74b1c26a0f0e7be5ec6a.png"
-              alt="Universitas logos"
-              fill
-              className="object-contain"
-              sizes="220px"
-            />
-          </div>
-          <div className="w-[220px] h-[220px] relative">
-            <Image
-              src="/assets/media/0e5a349d6e1e74b1c26a0f0e7be5ec6a.png"
-              alt="Universitas logos"
-              fill
-              className="object-contain"
-              sizes="220px"
-            />
-          </div>
+        <div className="relative overflow-hidden">
+          <motion.div
+            className="flex gap-8 items-center"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          >
+            {[...logos, ...logos].map((logo, i) => (
+              <div key={i} className="w-[120px] h-[60px] relative flex-shrink-0">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-contain"
+                  sizes="120px"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </motion.section>

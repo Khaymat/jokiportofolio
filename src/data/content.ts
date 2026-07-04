@@ -103,9 +103,21 @@ export const processSteps: ProcessStep[] = [
 ];
 
 export const testimonials: TestimonialItem[] = [
-  { name: "Client 1", quote: "Portofolio yang dibuat sangat profesional dan membantu saya mendapatkan interview." },
-  { name: "Client 2", quote: "Prosesnya cepat dan hasilnya melebihi ekspektasi. Sangat recommended!" },
-  { name: "Client 3", quote: "CV yang dibuat lolos ATS dan saya langsung dapat panggilan interview." },
+  {
+    name: "Rizky Amelia",
+    role: "Fresh Graduate",
+    quote: "Dulu asli stres banget, udah apply puluhan kali lewat LinkedIn atau Jobstreet tapi gak pernah ada panggilan sama sekali. Akhirnya nekat coba rombak CV sama Portofolio di Joki Portofolio. Gila sih, dalam 2 minggu setelah direvisi langsung dapet 4 panggilan interview sekaligus di Tech Company! Metode STAR-nya ngebantu banget pas ngejelasin hasil kerjaan.",
+  },
+  {
+    name: "Andi Wijaya",
+    role: "Marketing Specialist",
+    quote: "Gue mutusin buat career switch ke Digital Marketing dan ngerasa minder karena gak punya background linear. Tapi setelah LinkedIn gue dioptimasi sama dibikinin portofolio studi kasus dari proyek mandiri, profil gue jadi kelihatan pro banget. Sekarang malah rekruter yang aktif reach out duluan nawarin loker ke gue lewat DM. Worth it parah!",
+  },
+  {
+    name: "Jessica Lauren",
+    role: "Software Engineer Intern",
+    quote: "Kombinasi perbaikan CV ATS sama Portfolio Showcase di sini ngebantu aku banget waktu mau daftar magang. Tim Joki Portofolio paham banget cara nulis pencapaian berbasis data kuantitatif, jadi portofolioku gak cuma estetik tapi ada isinya. Alhamdulillah langsung keterima magang di perusahaan impian!",
+  },
 ];
 
 export const heroContent = {

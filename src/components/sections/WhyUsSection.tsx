@@ -45,10 +45,10 @@ export default function WhyUsSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex items-start gap-4"
+                className="flex items-start gap-3"
               >
                 {/* Red Circle Number */}
-                <div className="flex-shrink-0 w-9 h-9 bg-red-500 rounded-full flex items-center justify-center shadow-md">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center shadow-md mt-0.5">
                   <span className="text-white font-bold text-xs font-heading">
                     {feature.number}
                   </span>
@@ -74,7 +74,7 @@ export default function WhyUsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:sticky lg:top-24"
           >
-            <p className="text-sm font-bold italic text-[#3455bb] mb-2">
+            <p className="text-sm font-bold italic text-primary mb-2">
               Mengapa Kami?
             </p>
             <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-dark mb-6 leading-tight tracking-tight">
@@ -84,13 +84,13 @@ export default function WhyUsSection() {
             <p className="text-sm text-text-muted leading-relaxed whitespace-pre-line mb-8">
               Portofolio bukan cuma tempat naruh hasil kerja. Kalau disusun dengan benar, portofolio bisa jadi alasan recruiter ngajak interview atau klien langsung nge-chat duluan.{"\n\n"}Kami bantu bikin portofolio yang enak dilihat, gampang dipahami, dan yang paling penting: bisa nunjukin value kamu tanpa harus banyak ngomong.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button className="px-5 py-2.5 bg-[#e0e7ff] text-primary rounded-xl text-sm font-semibold hover:bg-[#d0d7ff] transition-colors">
+              <div className="flex flex-wrap gap-3">
+              <a href="/template-cv-ats" className="px-5 py-2.5 bg-[#e0e7ff] text-primary rounded-xl text-sm font-semibold hover:bg-[#d0d7ff] transition-colors">
                 Template CV
-              </button>
-              <button className="px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-semibold hover:bg-primary-light transition-colors">
+              </a>
+              <a href="/template-portofolio-kreatif" className="px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-semibold hover:bg-primary-light transition-colors">
                 Template Portofolio
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>

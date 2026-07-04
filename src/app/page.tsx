@@ -5,17 +5,19 @@ import TargetAudience from "@/components/sections/TargetAudience";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ProcessSteps from "@/components/sections/ProcessSteps";
+import FAQSection from "@/components/sections/FAQSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <MarqueeLogos />
-      <WhyUsSection />
       <TargetAudience />
+      <WhyUsSection />
       <ServicesSection />
-      <TestimonialsSection />
       <ProcessSteps />
+      <TestimonialsSection />
+      <FAQSection />
     </>
   );
 }

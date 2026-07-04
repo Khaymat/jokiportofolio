@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PricingCard from "@/components/ui/PricingCard";
 import { pricingCategories } from "@/data/pricing";
 
@@ -50,19 +51,13 @@ export default function PricelistPage() {
           <p className="text-sm text-text-muted mb-6 max-w-xl">
             Mulai bangun personal branding dengan portofolio, CV, dan LinkedIn yang lebih profesional. Pilih paket sesuai kebutuhan dan target kariermu.
           </p>
-          <div className="inline-flex items-center gap-4 bg-white rounded-2xl px-6 py-4">
+          <div className="inline-flex items-center gap-6 bg-white rounded-2xl px-6 py-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">BCA</span>
-              </div>
-              <span className="text-dark font-bold text-lg">BCA</span>
+              <Image src="/assets/media/bca_logo.svg" alt="BCA" width={60} height={20} className="h-8 w-auto" />
             </div>
             <div className="w-px h-8 bg-gray-200"></div>
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
-              </div>
-              <span className="text-dark font-bold text-lg">gopay</span>
+              <Image src="/assets/media/gopay_logo.svg" alt="GoPay" width={80} height={20} className="h-7 w-auto" />
             </div>
           </div>
         </div>

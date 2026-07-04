@@ -52,13 +52,9 @@ export default function PricelistPage() {
             Mulai bangun personal branding dengan portofolio, CV, dan LinkedIn yang lebih profesional. Pilih paket sesuai kebutuhan dan target kariermu.
           </p>
           <div className="inline-flex items-center gap-6 bg-white rounded-2xl px-6 py-4">
-            <div className="flex items-center gap-2">
-              <Image src="/assets/media/bca_logo.svg" alt="BCA" width={60} height={20} className="h-8 w-auto" />
-            </div>
+            <Image src="/assets/media/bca_logo.svg" alt="BCA" width={120} height={38} className="h-9 w-auto" />
             <div className="w-px h-8 bg-gray-200"></div>
-            <div className="flex items-center gap-2">
-              <Image src="/assets/media/gopay_logo.svg" alt="GoPay" width={80} height={20} className="h-7 w-auto" />
-            </div>
+            <Image src="/assets/media/gopay_logo.svg" alt="GoPay" width={63} height={16} className="h-7 w-auto" />
           </div>
         </div>
       </section>

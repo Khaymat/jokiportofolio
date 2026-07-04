@@ -6,7 +6,7 @@ interface PricingCardProps {
 
 export default function PricingCard({ item }: PricingCardProps) {
   return (
-    <div className="relative bg-[#252525] border border-[#555] rounded-[23px] p-6 md:p-8 flex flex-col transition-all duration-300 hover:-translate-y-1">
+    <div className="relative bg-[#252525] border border-[#555] rounded-[23px] p-6 md:p-8 flex flex-col transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02] hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
       {/* Recommended Badge */}
       {item.recommended && (
         <div className="absolute top-5 right-5 flex flex-col items-center gap-1">

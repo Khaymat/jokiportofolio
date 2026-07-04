@@ -45,10 +45,10 @@ export default function WhyUsSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-3 group"
               >
                 {/* Red Circle Number */}
-                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center shadow-md mt-0.5">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center shadow-md mt-0.5 transition-all duration-300 group-hover:scale-110 group-hover:bg-red-600">
                   <span className="text-white font-bold text-xs font-heading">
                     {feature.number}
                   </span>

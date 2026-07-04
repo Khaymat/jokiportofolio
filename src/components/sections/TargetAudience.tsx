@@ -49,7 +49,7 @@ export default function TargetAudience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white border border-gray-100 rounded-[23px] overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="bg-white border border-gray-100 rounded-[23px] overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20"
             >
               <div className="relative w-full aspect-[4/5]">
                 <Image

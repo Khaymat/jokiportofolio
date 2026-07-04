@@ -13,11 +13,11 @@ export default function TemplateCard({ template }: TemplateCardProps) {
     : "aspect-[1131/1600]";
 
   return (
-    <div className="group flex flex-col items-center">
+    <div className="group flex flex-col items-center transition-all duration-500 hover:-translate-y-1">
       {/* Image */}
       <div
         className={cn(
-          "relative overflow-hidden rounded-2xl shadow-lg w-full",
+          "relative overflow-hidden rounded-2xl shadow-lg w-full ring-0 transition-all duration-500 group-hover:shadow-xl group-hover:ring-2 group-hover:ring-primary/30",
           aspectRatio
         )}
       >

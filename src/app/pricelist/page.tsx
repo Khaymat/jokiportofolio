@@ -29,38 +29,93 @@ export default function PricelistPage() {
         </div>
       </section>
 
-      {/* Ketentuan */}
+      {/* Ketentuan & Berkas */}
       <section className="py-10 bg-dark border-t border-[#333]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-text-white font-heading mb-6">
-            Ketentuan
+          <h2 className="text-3xl font-bold text-text-white font-heading mb-4">
+            Ketentuan & Berkas yang Perlu Kamu Siapkan
           </h2>
-          <ul className="space-y-3 text-sm text-text-muted leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
-              <span>Pembayaran dilakukan di awal (DP 50%) dan sisanya setelah selesai (50%).</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
-              <span>Revisi sesuai paket yang dipilih. Revisi tambahan dikenakan biaya sesuai kesepakatan.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
-              <span>Waktu pengerjaan 1-3 hari kerja tergantung tingkat kesulitan dan paket yang dipilih.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
-              <span>Hasil akhir dikirim dalam format PDF (dan file editable jika termasuk dalam paket).</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
-              <span>Data pribadi kamu aman dan tidak akan disebarluaskan.</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
-              <span>Dengan melakukan pemesanan, kamu menyetujui seluruh ketentuan yang berlaku.</span>
-            </li>
-          </ul>
+          <p className="text-sm text-text-muted mb-8 max-w-2xl">
+            Proses kerja sama bisa berjalan lancar tanpa hambatan, yuk intip apa aja yang perlu kamu siapkan sebelum order sesuai layanan yang kamu pilih:
+          </p>
+
+          <div className="space-y-8">
+            {/* 1. CV */}
+            <div>
+              <h3 className="text-lg font-bold text-text-white font-heading mb-3 flex items-center gap-2">
+                <span className="text-primary-light">1.</span> Jasa Pembuatan & Revamp CV
+              </h3>
+              <p className="text-sm text-text-muted mb-3">
+                Sebelum mulai lewat WhatsApp/Chat admin, pastikan kamu sudah menyiapkan:
+              </p>
+              <ul className="space-y-2 text-sm text-text-muted pl-5">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">CV Lama (jika Ada):</strong> Formatnya mau PDF, Word, atau berupa screenshot foto kasar juga boleh banget.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Detail Riwayat Karier:</strong> Catatan ringkas tentang jurusan kuliah, riwayat organisasi, magang, kerja kepanitiaan, atau proyek mandiri yang pernah kamu ikuti.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Target Posisi:</strong> Posisi yang sedang kamu incar baik kerja atau magang apa nih? (Misal: Admin, Digital Marketing, Tech Internship, dll). Ini penting banget biar tim kami bisa menyesuaikan kata kunci industri.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Foto Profil Terbaik:</strong> Siapkan foto kasual/rapi atau formal dengan wajah yang kelihatan.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 2. Portofolio */}
+            <div>
+              <h3 className="text-lg font-bold text-text-white font-heading mb-3 flex items-center gap-2">
+                <span className="text-primary-light">2.</span> Jasa Pembuatan Portofolio
+              </h3>
+              <p className="text-sm text-text-muted mb-3">
+                Untuk portofolio, kuncinya adalah &quot;Bahan Mentah&quot; dari hasil karyamu. Yang perlu kamu kumpulkan ke dalam satu Google Drive adalah:
+              </p>
+              <ul className="space-y-2 text-sm text-text-muted pl-5">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Dokumentasi Proyek:</strong> Bisa berupa file tugas kuliah terbaik, laporan magang, hasil desain, tulisan, atau screenshot kerja kamu.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Catatan Cerita Proyek:</strong> Deskripsi singkat tentang proyek tersebut (Ngomongin soal kamu pakai tools apa, tugasnya dikapah, dan tujuan proyeknya buat apa sih).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Gak ada dokumentasi/foto &quot;desain&quot;:</strong> tenang, bisa diganti pakai sertifikat atau foto kegiatan saat aktif di organisasi/magang, kok!</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3. LinkedIn */}
+            <div>
+              <h3 className="text-lg font-bold text-text-white font-heading mb-3 flex items-center gap-2">
+                <span className="text-primary-light">3.</span> Jasa Optimasi LinkedIn
+              </h3>
+              <p className="text-sm text-text-muted mb-3">
+                Biar profil LinkedIn kamu makin stand out dan ramah di pencarian SEO recruiter, siapkan hal-hal ini:
+              </p>
+              <ul className="space-y-2 text-sm text-text-muted pl-5">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Akses Akun / Link Profil Saat Ini:</strong> Link profil LinkedIn kamu yang sekarang (kalau sudah punya akun).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">CV Terbaru:</strong> Siapkan file CV terakhir kamu (format PDF/Word) sebagai acuan tim kami untuk menjelaskan data pengalaman kerjamu.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+                  <span><strong className="text-text-white">Fokus Target:</strong> Tentukan tujuan utama kamu main LinkedIn saat ini (Apakah fokus cari kerja, bangun personal branding, cari klien/freelance, atau lainnya).</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

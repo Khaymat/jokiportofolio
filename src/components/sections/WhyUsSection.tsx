@@ -77,7 +77,7 @@ export default function WhyUsSection() {
             <p className="text-sm font-bold italic text-primary mb-2">
               Mengapa Kami?
             </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-dark mb-6 leading-tight tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-dark mb-6 leading-tight tracking-tight">
               Bukan Sekadar Bikin Portofolio, Tapi Bikin Orang{" "}
               <span className="text-primary">Ngelirik</span>
             </h2>

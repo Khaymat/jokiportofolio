@@ -22,7 +22,7 @@ export default function TemplateGallery({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-text-white mb-4 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-text-white mb-4 leading-tight tracking-tight">
             {title || activeCategory?.label || "Template Gallery"}
           </h1>
           <p className="text-sm md:text-base text-text-white/80 max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ export default function TemplateGallery({
         </div>
 
         {/* Templates Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {activeTemplates.map((template, i) => (
             <TemplateCard key={i} template={template} />
           ))}

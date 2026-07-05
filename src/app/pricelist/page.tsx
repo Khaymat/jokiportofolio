@@ -1,6 +1,5 @@
 import Image from "next/image";
-import PricingCard from "@/components/ui/PricingCard";
-import { pricingCategories } from "@/data/pricing";
+import PricingCarousel from "@/components/sections/PricingCarousel";
 
 export const metadata = {
   title: "Pricelist - jokiportofolio",
@@ -14,7 +13,7 @@ export default function PricelistPage() {
       {/* Header */}
       <section className="relative bg-dark pt-16 md:pt-24 pb-8 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-text-white mb-4 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-text-white mb-4 leading-tight tracking-tight">
             Pilih <span className="text-primary-light">Paket yang Paling Cocok</span> Buat Kamu
           </h1>
           <p className="text-sm md:text-base text-text-muted max-w-2xl mx-auto">
@@ -23,29 +22,52 @@ export default function PricelistPage() {
         </div>
       </section>
 
-      {/* Pricing Categories */}
+      {/* Pricing Cards - Carousel */}
       <section className="py-8 md:py-12 bg-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {pricingCategories.map((category, catIndex) => (
-            <div key={catIndex} className="mb-16 last:mb-0">
-              <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-text-white text-center mb-10">
-                {category.title}
-              </h2>
+          <PricingCarousel />
+        </div>
+      </section>
 
-              <div className="space-y-6">
-                {category.items.map((item, i) => (
-                  <PricingCard key={i} item={item} />
-                ))}
-              </div>
-            </div>
-          ))}
+      {/* Ketentuan */}
+      <section className="py-10 bg-dark border-t border-[#333]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-text-white font-heading mb-6">
+            Ketentuan
+          </h2>
+          <ul className="space-y-3 text-sm text-text-muted leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+              <span>Pembayaran dilakukan di awal (DP 50%) dan sisanya setelah selesai (50%).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+              <span>Revisi sesuai paket yang dipilih. Revisi tambahan dikenakan biaya sesuai kesepakatan.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+              <span>Waktu pengerjaan 1-3 hari kerja tergantung tingkat kesulitan dan paket yang dipilih.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+              <span>Hasil akhir dikirim dalam format PDF (dan file editable jika termasuk dalam paket).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+              <span>Data pribadi kamu aman dan tidak akan disebarluaskan.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-light mt-0.5 shrink-0">&#8226;</span>
+              <span>Dengan melakukan pemesanan, kamu menyetujui seluruh ketentuan yang berlaku.</span>
+            </li>
+          </ul>
         </div>
       </section>
 
       {/* Metode Pembayaran */}
       <section className="py-12 bg-dark border-t border-[#333]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-text-white font-heading mb-4">
+          <h2 className="text-3xl font-bold text-text-white font-heading mb-4">
             Metode Pembayaran
           </h2>
           <p className="text-sm text-text-muted mb-6 max-w-xl">

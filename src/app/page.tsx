@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <WhyUsSection />
       <MarqueeLogos />
       <TargetAudience />
-      <WhyUsSection />
       <ServicesSection />
       <ProcessSteps />
       <TestimonialsSection />

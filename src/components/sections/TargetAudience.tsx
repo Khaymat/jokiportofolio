@@ -32,7 +32,7 @@ export default function TargetAudience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
             Siapa Saja yang<br />
             <span className="text-primary">Butuh Jasa Ini?</span>
           </h2>
@@ -41,32 +41,39 @@ export default function TargetAudience() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-4xl mx-auto space-y-8">
           {personas.map((persona, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white border border-gray-100 rounded-[23px] overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:border-primary/20"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="flex flex-col md:flex-row items-center gap-6 bg-white border border-gray-100 rounded-[23px] overflow-hidden transition-all duration-500 hover:shadow-lg hover:border-primary/20"
             >
-              <div className="relative w-full aspect-[4/5]">
+              <div className="relative w-full md:w-40 aspect-[4/3] shrink-0">
                 <Image
                   src={persona.image}
                   alt={persona.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 256px"
                 />
-              </div>
-              <div className="p-5">
-                <h3 className="text-base font-bold text-dark font-heading mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <h3 className="absolute bottom-4 left-4 text-lg font-bold text-white font-heading drop-shadow-lg">
                   {persona.title}
                 </h3>
-                <p className="text-xs text-text-muted leading-relaxed">
+              </div>
+              <div className="p-5 md:px-0 md:pr-5 flex-1">
+                <p className="text-sm text-text-muted leading-relaxed">
                   {persona.description}
                 </p>
+                <div className="mt-3 flex items-center gap-2 text-primary text-xs font-semibold">
+                  <span>{i === 0 ? "Lihat Paket Fresh Graduate" : i === 1 ? "Lihat Paket Career Switcher" : "Lihat Paket Profesional"}</span>
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </motion.div>
           ))}

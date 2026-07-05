@@ -32,8 +32,8 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
-            Tingkatkan Peluang Karir<br />
+          <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight max-w-xs md:max-w-none mx-auto">
+            Tingkatkan Peluang Karir<br className="hidden md:block" />
             <span className="text-primary">Kamu 4x Lipat</span>
           </h2>
           <p className="text-sm text-text-muted max-w-xl mx-auto">

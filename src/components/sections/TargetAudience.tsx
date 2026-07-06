@@ -7,17 +7,17 @@ const personas = [
   {
     title: "Fresh Graduate & Mahasiswa",
     description: "Baru lulus atau mau daftar magang tapi bingung menyusun organisasi/tugas kuliah jadi portofolio menarik?",
-    image: "/assets/media/4399a4f3ee6773e4c1b86fc8395b7eaa.png",
+    image: "/assets/media/Sekolah.png",
   },
   {
     title: "Career Switcher",
     description: "Mau pindah haluan karier? Kami bantu re-branding CV dan LinkedIn agar pengalaman lamamu tetap dilirik di industri baru.",
-    image: "/assets/media/5c8baa6ebd1f66ede772efadacd8a2f2.png",
+    image: "/assets/media/career.png",
   },
   {
     title: "Profesional / Job Seeker",
     description: "Sudah apply puluhan kali tapi sepi panggilan? Berarti CV-mu belum lolos seleksi mesin ATS Parser. Yuk, kita rombak total!",
-    image: "/assets/media/7c2b65fd0dc6b9f649fc354035458161.png",
+    image: "/assets/media/kerja.png",
   },
 ];
 
@@ -59,12 +59,11 @@ export default function TargetAudience() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 256px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <h3 className="absolute bottom-4 left-4 text-lg font-bold text-white font-heading drop-shadow-lg">
-                  {persona.title}
-                </h3>
               </div>
               <div className="p-5 md:px-0 md:pr-5 flex-1">
+                <h3 className="text-lg font-bold text-dark font-heading mb-2">
+                  {persona.title}
+                </h3>
                 <p className="text-sm text-text-muted leading-relaxed">
                   {persona.description}
                 </p>

@@ -15,7 +15,7 @@ export interface PricingCategory {
 
 export const pricingCategories: PricingCategory[] = [
   {
-    title: "Pricelist CV",
+    title: "Standar",
     items: [
       {
         name: "CV (Versi Hemat Friendly)",
@@ -29,6 +29,24 @@ export const pricingCategories: PricingCategory[] = [
         originalPrice: "Rp 22.000",
         currentPrice: "Rp 20.000",
       },
+      {
+        name: "Portofolio Standar",
+        description: "Cocok buat kamu yang sudah punya isi tapi butuh dirapikan.",
+        features: [
+          "Rapihin teks biar rapi & enak dibaca",
+          "Perbaikan typo & struktur kalimat dasar",
+          "Layout sederhana",
+          "1x revisi",
+        ],
+        originalPrice: "Rp 5.500",
+        currentPrice: "Rp 5.000",
+        priceNote: "/Halaman",
+      },
+    ],
+  },
+  {
+    title: "Profesional",
+    items: [
       {
         name: "CV Professional",
         description: "Buat kamu yang mau CV terlihat lebih meyakinkan.",
@@ -44,6 +62,25 @@ export const pricingCategories: PricingCategory[] = [
         recommended: true,
       },
       {
+        name: "Portofolio Professional",
+        description: "Buat yang mau portofolionya terlihat lebih meyakinkan.",
+        features: [
+          "Penyusunan ulang teks biar lebih jelas & profesional",
+          "Perbaikan kalimat biar lebih impactful",
+          "Alur halaman lebih nyaman dibaca HR",
+          "2x revisi",
+        ],
+        originalPrice: "Rp 7.000",
+        currentPrice: "Rp 6.500",
+        priceNote: "/Halaman",
+        recommended: true,
+      },
+    ],
+  },
+  {
+    title: "Expert",
+    items: [
+      {
         name: "CV Expert",
         description: "Untuk kamu yang mau CV siap bersaing.",
         features: [
@@ -56,38 +93,6 @@ export const pricingCategories: PricingCategory[] = [
         ],
         originalPrice: "Rp 40.000",
         currentPrice: "Rp 35.000",
-        recommended: true,
-      },
-    ],
-  },
-  {
-    title: "Pricelist Portofolio",
-    items: [
-      {
-        name: "Portofolio Standar",
-        description: "Cocok buat kamu yang sudah punya isi tapi butuh dirapikan.",
-        features: [
-          "Rapihin teks biar rapi & enak dibaca",
-          "Perbaikan typo & struktur kalimat dasar",
-          "Layout sederhana",
-          "1x revisi",
-        ],
-        originalPrice: "Rp 5.500",
-        currentPrice: "Rp 5.000",
-        priceNote: "/Halaman",
-      },
-      {
-        name: "Portofolio Professional",
-        description: "Buat yang mau portofolionya terlihat lebih meyakinkan.",
-        features: [
-          "Penyusunan ulang teks biar lebih jelas & profesional",
-          "Perbaikan kalimat biar lebih impactful",
-          "Alur halaman lebih nyaman dibaca HR",
-          "2x revisi",
-        ],
-        originalPrice: "Rp 7.000",
-        currentPrice: "Rp 6.500",
-        priceNote: "/Halaman",
         recommended: true,
       },
       {
@@ -108,7 +113,7 @@ export const pricingCategories: PricingCategory[] = [
     ],
   },
   {
-    title: "Pricelist Surat Lamaran Kerja & Linkedin",
+    title: "Surat Lamaran & Optimasi Linkedin",
     items: [
       {
         name: "Surat Lamaran Kerja",

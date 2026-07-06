@@ -25,7 +25,7 @@ export default function PricingCarousel() {
           transition={{ duration: 0.3 }}
         >
           <div className="mb-2">
-            <span className="text-xs font-semibold text-primary-light uppercase tracking-wider">
+            <span className="text-xs font-semibold text-primary uppercase tracking-wider">
               {allItems[current].category}
             </span>
           </div>
@@ -36,10 +36,10 @@ export default function PricingCarousel() {
       <div className="flex items-center justify-center gap-4 mt-8">
         <button
           onClick={prev}
-          className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center hover:bg-white/10 transition-colors"
+          className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
           aria-label="Previous"
         >
-          <svg className="w-4 h-4 text-text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -50,10 +50,10 @@ export default function PricingCarousel() {
 
         <button
           onClick={next}
-          className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center hover:bg-white/10 transition-colors"
+          className="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
           aria-label="Next"
         >
-          <svg className="w-4 h-4 text-text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>

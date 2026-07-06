@@ -64,12 +64,12 @@ export default function HeroSection() {
                 <svg className="w-3.5 h-3.5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
-                Rate 4.9
+                Rate 4.9 dari Job Seeker
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
               Jasa Buat{" "}
               <span className="text-primary">CV ATS,</span>
               <br />

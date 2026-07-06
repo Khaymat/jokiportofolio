@@ -27,7 +27,7 @@ const features = [
 
 export default function WhyUsSection() {
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-16 md:py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left - Numbered List */}
@@ -55,10 +55,10 @@ export default function WhyUsSection() {
                 </div>
                 {/* Text */}
                 <div>
-                  <h3 className="text-sm font-bold text-dark font-heading mb-1">
+                  <h3 className="text-sm font-bold text-white font-heading mb-1">
                     {feature.title}
                   </h3>
-                  <p className="text-xs text-text-muted leading-relaxed">
+                  <p className="text-xs text-white/70 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -74,21 +74,21 @@ export default function WhyUsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:sticky lg:top-24"
           >
-            <p className="text-sm font-bold italic text-primary mb-2">
+            <p className="text-sm font-bold italic text-white/80 mb-2">
               Mengapa Kami?
             </p>
-            <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-dark mb-6 leading-tight tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-white mb-6 leading-tight tracking-tight">
               Bukan Sekadar Bikin Portofolio, Tapi Bikin Orang{" "}
-              <span className="text-primary">Ngelirik</span>
+              <span className="text-hero-yellow">Ngelirik</span>
             </h2>
-            <p className="text-sm text-text-muted leading-relaxed whitespace-pre-line mb-8">
+            <p className="text-sm text-white/70 leading-relaxed whitespace-pre-line mb-8">
               Portofolio bukan cuma tempat naruh hasil kerja. Kalau disusun dengan benar, portofolio bisa jadi alasan recruiter ngajak interview atau klien langsung nge-chat duluan.{"\n\n"}Kami bantu bikin portofolio yang enak dilihat, gampang dipahami, dan yang paling penting: bisa nunjukin value kamu tanpa harus banyak ngomong.
             </p>
               <div className="flex flex-wrap gap-3">
-              <a href="/template-cv-ats" className="px-5 py-2.5 bg-[#e0e7ff] text-primary rounded-xl text-sm font-semibold hover:bg-[#d0d7ff] transition-colors">
+              <a href="/template-cv-ats" className="px-5 py-2.5 bg-white text-primary rounded-xl text-sm font-semibold hover:bg-gray-100 transition-colors">
                 Template CV
               </a>
-              <a href="/template-portofolio-kreatif" className="px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-semibold hover:bg-primary-light transition-colors">
+              <a href="/template-portofolio-kreatif" className="px-5 py-2.5 bg-hero-yellow text-dark rounded-xl text-sm font-semibold hover:bg-hero-yellow-light transition-colors">
                 Template Portofolio
               </a>
             </div>

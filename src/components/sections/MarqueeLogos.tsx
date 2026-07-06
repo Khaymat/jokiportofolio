@@ -15,7 +15,7 @@ function MarqueeRow({ items, duration }: { items: typeof logos; duration: number
   return (
     <div className="relative overflow-hidden">
       <motion.div
-        className="flex gap-6 items-center"
+        className="flex gap-3 items-center"
         animate={{ x: ["0%", "-50%"] }}
         transition={{ repeat: Infinity, duration, ease: "linear" }}
       >
@@ -56,8 +56,8 @@ export default function MarqueeLogos() {
         </motion.h3>
 
         <div className="space-y-4">
-          <MarqueeRow items={row1} duration={15} />
-          <MarqueeRow items={row2} duration={18} />
+          <MarqueeRow items={row1} duration={6} />
+          <MarqueeRow items={row2} duration={8} />
         </div>
       </div>
     </motion.section>

@@ -3,6 +3,7 @@ import { Montserrat, Poppins, Arimo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingWA from "@/components/ui/FloatingWA";
 import { siteConfig } from "@/lib/constants";
 
 const montserrat = Montserrat({
@@ -43,6 +44,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <FloatingWA />
       </body>
     </html>
   );

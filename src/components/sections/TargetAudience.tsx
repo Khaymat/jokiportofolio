@@ -49,15 +49,15 @@ export default function TargetAudience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col md:flex-row items-center gap-6 bg-white border border-gray-100 rounded-[23px] overflow-hidden transition-all duration-500 hover:shadow-lg hover:border-primary/20"
+              className="flex flex-col md:flex-row items-center md:items-stretch gap-6 bg-white border border-gray-100 rounded-[23px] overflow-hidden transition-all duration-500 hover:shadow-lg hover:border-primary/20"
             >
-              <div className="relative w-full md:w-40 aspect-[4/3] shrink-0">
+              <div className="relative w-full md:w-48 h-52 md:self-stretch shrink-0 rounded-t-[23px] md:rounded-t-none md:rounded-l-[23px] overflow-hidden">
                 <Image
                   src={persona.image}
                   alt={persona.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 256px"
+                  sizes="(max-width: 768px) 100vw, 176px"
                 />
               </div>
               <div className="p-5 md:px-0 md:pr-5 flex-1">

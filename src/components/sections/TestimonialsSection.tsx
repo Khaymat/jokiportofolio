@@ -34,7 +34,9 @@ export default function TestimonialsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
-            {testimonialIntro.title}
+            Cerita Mereka yang<br />
+            Berhasil Upgrade<br />
+            Personal Branding
           </h2>
           <p className="text-sm text-text-muted max-w-xl mx-auto">
             {testimonialIntro.description}

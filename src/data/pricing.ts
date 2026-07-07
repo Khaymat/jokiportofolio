@@ -15,7 +15,7 @@ export interface PricingCategory {
 
 export const pricingCategories: PricingCategory[] = [
   {
-    title: "Standar",
+    title: "Paket Standar",
     items: [
       {
         name: "CV (Versi Hemat Friendly)",
@@ -45,7 +45,7 @@ export const pricingCategories: PricingCategory[] = [
     ],
   },
   {
-    title: "Profesional",
+    title: "Paket Profesional",
     items: [
       {
         name: "CV Professional",
@@ -78,7 +78,7 @@ export const pricingCategories: PricingCategory[] = [
     ],
   },
   {
-    title: "Expert",
+    title: "Paket Expert",
     items: [
       {
         name: "CV Expert",
@@ -91,8 +91,8 @@ export const pricingCategories: PricingCategory[] = [
           "Penyesuaian posisi target kerja",
           "3x revisi",
         ],
-        originalPrice: "Rp 40.000",
-        currentPrice: "Rp 35.000",
+        originalPrice: "Rp 48.000",
+        currentPrice: "Rp 42.000",
         recommended: true,
       },
       {
@@ -113,7 +113,7 @@ export const pricingCategories: PricingCategory[] = [
     ],
   },
   {
-    title: "Surat Lamaran & Optimasi Linkedin",
+    title: "LinkedIn dan Cover Letter",
     items: [
       {
         name: "Surat Lamaran Kerja",

@@ -33,7 +33,8 @@ export default function ServicesSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight max-w-xs md:max-w-none mx-auto">
-            Tingkatkan Peluang Karir<br className="hidden md:block" />
+            Tingkatkan<br />
+            Peluang Karir<br />
             <span className="text-primary">Kamu 4x Lipat</span>
           </h2>
           <p className="text-sm text-text-muted max-w-xl mx-auto">

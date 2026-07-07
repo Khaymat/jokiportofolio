@@ -6,9 +6,7 @@ import { pricingCategories } from "@/data/pricing";
 import PricingCard from "@/components/ui/PricingCard";
 
 export default function PricingCarousel() {
-  const allItems = pricingCategories.flatMap((cat) =>
-    cat.items.map((item) => ({ ...item, category: cat.title }))
-  );
+  const allItems = pricingCategories.flatMap((cat) => cat.items);
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((c) => (c === 0 ? allItems.length - 1 : c - 1));
@@ -24,11 +22,6 @@ export default function PricingCarousel() {
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="mb-2">
-            <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-              {allItems[current].category}
-            </span>
-          </div>
           <PricingCard item={allItems[current]} />
         </motion.div>
       </AnimatePresence>

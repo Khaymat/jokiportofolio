@@ -41,7 +41,7 @@ export default function TargetAudience() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-3xl mx-auto space-y-4">
           {personas.map((persona, i) => (
             <motion.div
               key={i}
@@ -49,25 +49,25 @@ export default function TargetAudience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col md:flex-row items-center md:items-stretch gap-3 md:gap-6 bg-white border border-gray-100 rounded-[23px] overflow-hidden transition-all duration-500 hover:shadow-lg hover:border-primary/20"
+              className="flex flex-row items-center gap-4 p-4 md:p-5 bg-white border border-gray-100 rounded-[23px] transition-all duration-500 hover:shadow-lg hover:border-primary/20"
             >
-              <div className="relative w-full md:w-48 h-52 md:self-stretch shrink-0 rounded-t-[23px] md:rounded-t-none md:rounded-l-[23px] overflow-hidden">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 shrink-0 rounded-[18px] overflow-hidden">
                 <Image
                   src={persona.image}
                   alt={persona.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 176px"
+                  sizes="(max-width: 768px) 80px, 112px"
                 />
               </div>
-              <div className="p-5 md:px-0 md:pr-5 flex-1">
-                <h3 className="text-lg font-bold text-dark font-heading mb-2">
+              <div className="flex-1 min-w-0">
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-dark font-heading mb-1 md:mb-2">
                   {persona.title}
                 </h3>
-                <p className="text-sm text-text-muted leading-relaxed">
+                <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
                   {persona.description}
                 </p>
-                <div className="mt-3 flex items-center gap-2 text-primary text-xs font-semibold">
+                <div className="mt-2 flex items-center gap-1.5 text-primary text-[10px] sm:text-xs font-bold">
                   <span>{i === 0 ? "Lihat Paket Fresh Graduate" : i === 1 ? "Lihat Paket Career Switcher" : "Lihat Paket Profesional"}</span>
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

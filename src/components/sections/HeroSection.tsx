@@ -104,26 +104,21 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Stats - redesigned with cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {/* Stats - inline horizontal */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              className="flex flex-wrap items-center gap-x-5 gap-y-1"
+            >
               {stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
-                  className="bg-white rounded-xl border border-gray-100 p-3 text-center shadow-sm"
-                >
-                  <div className="text-primary mb-1 flex justify-center">{statIcons[i]}</div>
-                  <div className="text-base md:text-lg font-extrabold font-heading text-dark">
-                    {stat.value}
-                  </div>
-                  <div className="text-[10px] md:text-xs text-text-muted">
-                    {stat.label}
-                  </div>
-                </motion.div>
+                <div key={i} className="flex items-center gap-1.5">
+                  <span className="text-primary shrink-0">{statIcons[i]}</span>
+                  <span className="text-sm font-extrabold font-heading text-dark">{stat.value}</span>
+                  <span className="text-xs text-text-muted">{stat.label}</span>
+                </div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

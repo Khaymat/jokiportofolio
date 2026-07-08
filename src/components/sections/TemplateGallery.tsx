@@ -18,7 +18,7 @@ export default function TemplateGallery({
   const activeTemplates = activeCategory?.templates || [];
 
   return (
-    <section className="py-16 md:py-24 bg-primary">
+    <section className="py-16 md:py-24" style={{ backgroundColor: "#203a5f" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

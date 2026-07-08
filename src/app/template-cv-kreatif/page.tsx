@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function CVKreatifPage() {
   return (
-    <div className="pt-14 min-h-screen bg-primary">
+    <div className="pt-14 min-h-screen" style={{ backgroundColor: "#203a5f" }}>
       <TemplateGallery
         title="Template CV Kreatif"
         description="Screenshot templatenya, lalu kirim ke admin"

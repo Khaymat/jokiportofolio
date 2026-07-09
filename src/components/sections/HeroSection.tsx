@@ -22,7 +22,7 @@ const statIcons = [
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-background pt-16 pb-12 md:pt-24 md:pb-20 overflow-hidden">
+    <section className="relative bg-background pt-16 pb-0 md:pt-24 md:pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
@@ -33,8 +33,8 @@ export default function HeroSection() {
             className="text-center lg:text-left lg:order-1"
           >
             {/* Tags */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-4">
-              <span className="text-xs text-text-muted flex items-center gap-1">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-primary">
                 <svg className="w-3.5 h-3.5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
@@ -43,22 +43,21 @@ export default function HeroSection() {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight">
-              Jasa Buat{" "}
-              <span className="text-primary">CV ATS,</span>
-              <br />
-              Portofolio Kerja &amp;
-              <br />
-              Optimasi Linkedin
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading text-dark mb-4 leading-tight tracking-tight px-2 md:px-0">
+              Jasa Buat <span className="text-primary">CV ATS,</span>{" "}
+              <br className="hidden md:inline" />
+              Portofolio Kerja &amp;{" "}
+              <br className="hidden md:inline" />
+              Optimasi LinkedIn
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm md:text-base text-text-muted mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-sm md:text-base text-text-muted mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed px-4 md:px-0">
               CV, Portofolio, dan LinkedIn yang dirancang biar profilmu terlihat lebih profesional, lebih dilirik recruiter, dan lebih percaya diri saat apply kerja.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 mb-8 justify-center lg:justify-start px-4 md:px-0">
               <a
                 href="/pricelist"
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white text-sm font-semibold px-8 py-3 rounded-xl transition-colors shadow-md"
@@ -83,7 +82,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="grid grid-cols-2 gap-x-6 gap-y-2 max-w-sm mx-auto lg:mx-0"
+              className="grid grid-cols-2 gap-x-6 gap-y-2 max-w-sm mx-auto lg:mx-0 px-4 md:px-0 mb-8 md:mb-0"
             >
               {stats.map((stat, i) => (
                 <div key={i} className="flex items-center gap-1.5">
@@ -95,20 +94,20 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Hero Image - top on mobile */}
+          {/* Hero Image - bottom flush on mobile, side by side on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center justify-center lg:order-2"
+            className="flex items-end justify-center lg:order-2 w-[115%] -mx-[7.5%] md:w-full md:mx-0 mt-6 md:mt-0"
           >
-            <div className="relative w-full max-w-lg aspect-[4/3]">
+            <div className="relative w-full max-w-lg aspect-[4/3] -mb-1">
               <Image
                 src="/assets/media/hero_career.png"
                 alt="CV Portfolio Preview"
                 fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 500px"
+                className="object-contain object-bottom"
+                sizes="(max-width: 768px) 120vw, 500px"
                 priority
               />
             </div>

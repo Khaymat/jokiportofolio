@@ -115,20 +115,19 @@ export default function HeroSection() {
 
           {/* Hero Image - bottom flush on mobile, side by side on desktop */}
           <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            initial={{ opacity: 0, x: 50, scale: 0.95 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex items-end justify-end lg:order-2 w-[130%] -mr-[15%] ml-auto md:w-full md:mx-0 mt-6 md:mt-0"
-            style={{ transformOrigin: "bottom right" }}
+            className="flex items-end justify-center lg:order-2 w-full mt-6 md:mt-0"
           >
-            <div className="relative w-full max-w-lg aspect-[4/3] -mb-1">
+            <div className="relative w-full max-w-md sm:max-w-lg aspect-[4/3] -mb-1 px-4 sm:px-0">
               <Image
                 src="/assets/media/hero_career.png"
                 alt="CV Portfolio Preview"
                 fill
                 className="object-contain object-bottom"
-                sizes="(max-width: 768px) 120vw, 500px"
+                sizes="(max-width: 768px) 100vw, 500px"
                 priority
               />
             </div>

@@ -20,9 +20,9 @@
   --color-background: #f1f1f1;
   --color-border-light: #dddddd;
 
-  --font-heading: "Montserrat", sans-serif;
-  --font-body: "Poppins", sans-serif;
-  --font-accent: "Arimo", sans-serif;
+  --font-heading: var(--font-heading), "Plus Jakarta Sans", sans-serif;
+  --font-body: var(--font-body), "Poppins", sans-serif;
+  --font-accent: var(--font-accent), "Arimo", sans-serif;
 }
 
 :root {

@@ -22,7 +22,17 @@ const statIcons = [
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-background pt-24 pb-0 md:pt-24 md:pb-20 overflow-hidden">
+    <section
+      className="relative bg-background pt-24 pb-0 md:pt-24 md:pb-20 overflow-hidden"
+      style={{
+        backgroundImage: `
+          radial-gradient(circle at 50% 30%, rgba(77, 113, 224, 0.08) 0%, transparent 60%),
+          linear-gradient(rgba(77, 113, 224, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(77, 113, 224, 0.02) 1px, transparent 1px)
+        `,
+        backgroundSize: "100% 100%, 24px 24px, 24px 24px",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
@@ -34,7 +44,7 @@ export default function HeroSection() {
           >
             {/* Tags */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-primary">
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50/60 border border-blue-200/50 text-xs font-semibold text-primary">
                 <svg className="w-3.5 h-3.5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
@@ -60,15 +70,15 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8 justify-center lg:justify-start px-4 md:px-0">
               <a
                 href="/pricelist"
-                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white text-sm font-semibold px-8 py-3 rounded-xl transition-colors shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
               >
-                Lihat Paket & Harga
+                Lihat Paket &amp; Harga
               </a>
               <a
                 href={siteConfig.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-dark border border-gray-200 text-sm font-semibold px-8 py-3 rounded-xl transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-dark border border-gray-200 text-sm font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 <svg className="w-4 h-4 text-dark/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a.596.596 0 01-.478-.035.344.344 0 01-.137-.371l1.246-3.517c-2.903-1.15-4.82-3.486-4.82-6.046 0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
@@ -77,18 +87,27 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Stats - 2x2 grid inline (gaya nakespro) */}
+            {/* Stats Cards */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="grid grid-cols-2 gap-x-6 gap-y-2 max-w-sm mx-auto lg:mx-0 px-4 md:px-0 mb-8 md:mb-0"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl mx-auto lg:mx-0 w-full px-4 md:px-0 mb-8 lg:mb-0"
             >
               {stats.map((stat, i) => (
-                <div key={i} className="flex items-center gap-1.5">
-                  <span className="text-primary shrink-0">{statIcons[i]}</span>
-                  <span className="text-sm font-extrabold font-heading text-dark">{stat.value}</span>
-                  <span className="text-xs text-text-muted">{stat.label}</span>
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl border border-gray-200/50 p-3 text-center shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
+                >
+                  <span className="p-1.5 rounded-lg bg-primary/5 text-primary mb-1.5 shrink-0">
+                    {statIcons[i]}
+                  </span>
+                  <span className="text-sm font-extrabold font-heading text-dark block leading-tight">
+                    {stat.value}
+                  </span>
+                  <span className="text-[10px] text-text-muted font-medium mt-0.5 block leading-tight">
+                    {stat.label}
+                  </span>
                 </div>
               ))}
             </motion.div>

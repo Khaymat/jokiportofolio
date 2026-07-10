@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins, Arimo } from "next/font/google";
+import { Plus_Jakarta_Sans, Poppins, Arimo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWA from "@/components/ui/FloatingWA";
 import { siteConfig } from "@/lib/constants";
 
-const montserrat = Montserrat({
+const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${montserrat.variable} ${poppins.variable} ${arimo.variable} h-full antialiased`}
+      className={`${plusJakartaSans.variable} ${poppins.variable} ${arimo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

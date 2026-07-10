@@ -67,10 +67,10 @@ export default function HeroSection() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-8 justify-center lg:justify-start px-4 md:px-0">
+            <div className="flex flex-col items-center sm:flex-row gap-3 mb-8 justify-center lg:justify-start px-4 md:px-0">
               <a
                 href="/pricelist"
-                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white text-sm font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 w-[280px] sm:w-auto"
               >
                 Lihat Paket &amp; Harga
               </a>
@@ -78,7 +78,7 @@ export default function HeroSection() {
                 href={siteConfig.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-dark border border-gray-200 text-sm font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-dark border border-gray-200 text-sm font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 w-[280px] sm:w-auto"
               >
                 <svg className="w-4 h-4 text-dark/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a.596.596 0 01-.478-.035.344.344 0 01-.137-.371l1.246-3.517c-2.903-1.15-4.82-3.486-4.82-6.046 0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />

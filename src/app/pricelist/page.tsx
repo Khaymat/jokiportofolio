@@ -1,5 +1,6 @@
 import Image from "next/image";
-import PricingCarousel from "@/components/sections/PricingCarousel";
+import PricingCard from "@/components/ui/PricingCard";
+import { pricingCategories } from "@/data/pricing";
 
 export const metadata = {
   title: "Pricelist - jokiportofolio",
@@ -22,10 +23,29 @@ export default function PricelistPage() {
         </div>
       </section>
 
-      {/* Pricing Cards - Carousel */}
+      {/* Pricing Grid */}
       <section className="py-8 md:py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <PricingCarousel />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {pricingCategories.map((category) => (
+              <div key={category.title} className="flex flex-col">
+                {/* Section Header for Category */}
+                <div className="flex items-center gap-2 mb-5">
+                  <div className="w-1.5 h-6 bg-primary rounded-full"></div>
+                  <h2 className="text-xl md:text-2xl font-extrabold text-dark font-heading">
+                    {category.title}
+                  </h2>
+                </div>
+
+                {/* Sub-grid of 2 cards side-by-side on all screens */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 flex-grow">
+                  {category.items.map((item) => (
+                    <PricingCard key={item.name} item={item} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

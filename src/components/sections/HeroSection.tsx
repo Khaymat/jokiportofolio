@@ -30,7 +30,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center lg:text-left lg:order-1"
+            className="text-center lg:text-left lg:order-1 flex flex-col justify-center min-h-[80vh] lg:min-h-0 py-6 lg:py-0"
           >
             {/* Tags */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">

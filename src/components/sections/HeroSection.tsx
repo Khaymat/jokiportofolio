@@ -121,7 +121,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex items-end justify-center lg:order-2 w-full mt-6 md:mt-0"
           >
-            <div className="relative w-[120%] sm:w-full max-w-md sm:max-w-lg aspect-[4/3] -mb-1 origin-bottom scale-[1.20] sm:scale-100 -translate-x-[1px] sm:translate-x-0">
+            <div className="relative w-[110%] sm:w-full max-w-md sm:max-w-lg aspect-[4/3] -mb-1 origin-bottom scale-125 sm:scale-100 -translate-x-12 sm:translate-x-0">
               <Image
                 src="/assets/media/hero_career.png"
                 alt="CV Portfolio Preview"

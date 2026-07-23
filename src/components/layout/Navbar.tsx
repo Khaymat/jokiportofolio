@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/data/navigation";
 import { cn } from "@/lib/utils";
@@ -16,9 +17,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1">
+
+            <Image
+              src="/logo.jpg"
+              alt="Jokiportofolio Logo"
+              width={32}
+              height={32}
+              className="rounded-md object-cover"
+            />
             <span className="text-2xl font-bold font-heading text-dark tracking-tight">
               jokiportofolio
             </span>
+
           </Link>
 
           {/* Desktop Navigation */}

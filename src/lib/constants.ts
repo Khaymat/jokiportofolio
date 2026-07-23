@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
     tiktok: "https://tiktok.com/@jokiportofolio",
   },
   metadata: {
-    title: "jokiportofolio - Jasa Buat CV ATS, Portofolio Kerja & Optimasi Linkedin",
+    title: "Jasa Pembuatan CV ATS, Portofolio & Optimasi LinkedIn | Jokiportofolio",
     description:
       "CV, Portofolio, dan LinkedIn yang dirancang biar profilmu terlihat lebih profesional, lebih dilirik recruiter, dan lebih percaya diri saat apply kerja.",
     keywords: [

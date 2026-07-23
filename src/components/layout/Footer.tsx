@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/constants";
 import { navigation } from "@/data/navigation";
 
@@ -33,9 +34,18 @@ export default function Footer() {
             {/* Brand */}
             <div>
               <Link href="/" className="flex items-center gap-1 mb-3">
+
+                <Image
+                  src="/logo.jpg"
+                  alt="Jokiportofolio Logo"
+                  width={24}
+                  height={24}
+                  className="rounded-sm object-cover"
+                />
                 <span className="text-lg font-bold font-heading text-text-white">
                   {siteConfig.name}
                 </span>
+
               </Link>
               <p className="text-text-muted text-xs leading-relaxed">
                 {siteConfig.description}

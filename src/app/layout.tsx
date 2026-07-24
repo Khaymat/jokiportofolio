@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   keywords: siteConfig.metadata.keywords,
   icons: {
     icon: [
-      { url: '/favicon.ico' },
       { url: '/icon.png', type: 'image/png' },
     ],
     apple: [
@@ -38,6 +37,7 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 
 export default function RootLayout({
   children,

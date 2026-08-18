@@ -28,7 +28,16 @@ export const metadata: Metadata = {
   title: siteConfig.metadata.title,
   description: siteConfig.metadata.description,
   keywords: siteConfig.metadata.keywords,
+  icons: {
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', type: 'image/png' },
+    ],
+  },
 };
+
 
 export default function RootLayout({
   children,
